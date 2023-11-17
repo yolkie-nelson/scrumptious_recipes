@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Scrumptious Recipes
+{% endblock title %}
+
+{% block content %}
+        <header>
+            <nav class="nav_bar">
+              <div class="main_nav">
+                <a class="navigation" href="{% url 'recipe_list' %}"><button class="button-56" role="button">Main Page</button></a>
+              </div>
+            {% if user.is_authenticated %}
+            <span></span>
+                  <span class="user_nav">
+                    <span class="navigation"> Hello, {{ user.first_name }}!</span>
+                    <a class="navigation" href="{% url 'my_recipe_list' %}"><button class="button-56" role="button">My recipes</button></a>
+                    <a class="navigation" href="{% url 'create_recipe' %}"><button class="button-56" role="button">Create a Recipe</button></a>
+                    <a class="navigation" href="{% url 'user_logout' %}"><button class="button-56" role="button">Log Out</button></a>
+                  </span>
+                {% else %}
+                <span></span>
+                <span class="login_container">
+                  <a class="navigation login" href="{% url 'signup' %}"><button class="button-56" role="button">Sign Up</button></a>
+                  <a class="navigation login" href="{% url 'user_login' %}"><button class="button-56" role="button">Log In</button></a>
+                </span>
+                {% endif %}
+            </nav>
+        </header>
+        <main>
+          <div class="heading">
+            <span></span>
+            <h1 class="heading-box darkgreen">Scrumptious Recipes</h1>
+            <span></span>
+          </div>
+          <div class="heading">
+            <span></span>
+            <h2 class="heading-box heading-2">All the food that's fit to eat</h2>
+            <span></span>
+          </div>
+                <div class="recipe-grid">
+                    {% for recipe in recipe_list %}
+                    <div class="recipe_card">
+                      <div class="img-hover-zoom">
+                        <div class="image_container">
+                          <a class="image_container" href="{% url 'show_recipe' recipe.id %}"><img class="food_image" src="{{ recipe.picture }}"></a>
+                        </div>
+                      </div>
+                      <div class="recipes-links">
+                          {% comment %} <span></span> {% endcomment %}
+                          <a href="{% url 'show_recipe' recipe.id %}"><button class="button-56" role="button">{{ recipe.title }}</button></a>
+                          {% comment %} <span></span> {% endcomment %}
+                      </div>
+                      <p class="recipe_description"> {{ recipe.description }}</p>
+                      <div class="ratings_container">
+                        <span class="rating_item">4.3 stars</span>
+                        <span class="rating_item">
+                            {% if recipe.vegan %}
+                             <img class="icons" src="{% static 'images/vegan.png' %}" alt="Vegan Icon">
+                            {% elif recipe.vegetarian %}
+                             <img class="icons" src="{% static 'images/vegetarian.png' %}" alt="Vegetarian Icon">
+                            {% endif %}
+                        </span>
+                      </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <script>
+                  const pictures = "{{ recipe_list }}"
+                  console.log(pictures)
+                </script>
+        </main>
+{% endblock content %}

@@ -1,0 +1,330 @@
+/* @import url(OrangeriePersonalUseOnlyRegular-ALaXL.otf) */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Zeyada&display=swap');)
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Marhey:wght@300&family=Nanum+Gothic&family=Zeyada&display=swap');
+
+
+html {
+    box-sizing: border-box;
+    font-family: 'Zeyada', cursive;
+}
+
+* {
+    box-sizing: inherit;
+    font-family: 'Marhey', sans-serif;
+}
+
+header {
+    /* background-color: rgba(66, 65, 65, 0.685); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://casas-algarve.com/content/uploads/2018/11/food-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+    color: white;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+}
+
+.heading-box {
+    display: grid;
+    justify-content: center;
+}
+
+.caveat {
+    font-family: 'Caveat';
+}
+
+.zedaya {
+    font-family: 'Zeyada', cursive;
+}
+
+.darkgreen {
+    color:darkgreen;
+    font-family: 'Zeyada', cursive;
+    font-size: 4rem;
+}
+
+.heading-2 {
+    color: rgb(255, 97, 89);
+    font-family: 'Zedaya', sans-serif;
+    text-shadow: 2px 3px rgb(81, 78, 78);
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(20deg, rebeccapurple, transparent), green; */
+}
+
+main {
+    padding: 16px;
+    margin: 0;
+    place-content: center;
+}
+
+footer {
+    text-indent: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgb(145, 216, 38);
+    margin-bottom: 15px;
+    margin-top: 100px;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.detail_main {
+    position: relative;
+}
+
+.recipes-links {
+    width: 20rem;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+.recipe_button {
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    font-size: 18px;
+    padding-top: 5px;
+    flex-wrap: nowrap;
+    position: relative;
+    z-index: 3;
+    background-color: rgba(22, 216, 8, 0.816);
+    color: rgb(255, 255, 255);
+
+}
+
+
+.image_container {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    place-content: center;
+    width: 20rem;
+    height: 20rem;
+    overflow-y: hidden;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.307);
+    /* border: 2px red solid; */
+}
+
+.food_image {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+}
+
+nav {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px;
+    padding: 16px
+}
+
+.recipe-grid {
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; */
+    justify-content: flex-start, space-between;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+table {
+    border: 1px rgba(0, 0, 0, 0.57) solid;
+    box-shadow: 4px 4px 4px 4px rgba(123, 101, 101, 0.468)
+}
+
+tr:nth-child(even) {
+    background-color: rgba(144, 192, 49, 0.338);
+}
+
+.icons {
+    height: 30px;
+}
+
+.recipe_card {
+    flex-basis: 25%;
+    margin-bottom: 2rem;
+}
+
+.ratings_container,
+.ratings_container_detail {
+    height: 2.2rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: auto;
+    /* border: red 1px solid; */
+
+}
+
+.ratings_container_detail {
+    padding-top: 5px;
+    grid-template-columns: 1fr 12fr;
+}
+
+.rating_item {
+    /* border: blue 1px solid; */
+    display: flex;
+    align-items: center;
+}
+
+.recipe_description {
+    height: 1rem;
+    max-width: 20rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 15px;
+    font-family: ;
+    /* overflow-x: scroll;
+    text-wrap:nowrap;
+    max-width: 10rem; */
+}
+
+.detail_pic {
+    height: 200px;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+
+.img-hover-zoom {
+    height: 300px;
+    overflow: hidden;
+}
+
+
+.img-hover-zoom img {
+    transition: transform .5s ease;
+}
+
+
+.img-hover-zoom:hover img {
+    transform: scale(1.5);
+}
+
+
+.navigation {
+    color: white;
+    /* padding-left: 20px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-wrap: nowrap;
+    /* border: 2px red solid; */
+}
+
+.nav_bar {
+    display: grid;
+    grid-template-columns: 2fr 10fr 4fr;
+    height: 10rem;
+    /* border: 2px red solid; */
+
+}
+
+
+
+
+.button-56 {
+    align-items: center;
+    background-color: rgb(165, 223, 165);
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-56:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.button-56:hover:after {
+    transform: translate(0, 0);
+}
+
+.button-56:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+
+.button-56:hover {
+    outline: 0;
+}
+
+@media (min-width: 768px) {
+    .button-56 {
+    padding: 0 40px;
+    }
+}
+
+
+.main_nav {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    /* border: 2px blue solid; */
+}
+
+.user_nav {
+    display: flex;
+    width: auto;
+    justify-content:space-between;
+    /* border: 2px greenyellow solid; */
+}
+
+.login_container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login {
+    margin-left: 2rem;
+}
